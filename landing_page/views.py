@@ -1,6 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse('<h1>clinica</h1>')
+    return render(request, 'landing_page/index.html')
+
+
+def imagem(request):
+    return render(request, 'landing_page/imagem.html')
