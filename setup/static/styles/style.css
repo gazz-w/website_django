@@ -33,7 +33,7 @@ body {
     line-height: 1;
     font-family: 'Space Grotesk', sans-serif;
     min-height: 100vh;
-    background: linear-gradient(#b0dbff, #c8e6ff, #e6f4ff);
+    background: linear-gradient(#96d0ff, #c8e6ff, #eff8ff);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -283,7 +283,7 @@ table {
 }
 
 .pagina-inicial {
-    max-width: 1440px;
+    max-width: 2000px;
     padding: 1.5rem;
     margin: 0 auto;
 }
@@ -358,4 +358,97 @@ table {
 
 .rodape__texto {
     font-size: 1.1rem;
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+    .banner__titulo {
+        font-size: 24px;
+        left: 20px;
+        top: 20px;
+    }
+
+    .banner__imagem {
+        border-radius: 10px; /* bordas mais suaves para telas menores */
+    }
+
+    .cabecalho {
+        flex-direction: column; /* Organiza os itens em coluna */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .cabecalho__busca, .busca__fundo {
+        width: 100%; /* Permite que a barra de busca preencha toda a largura disponível */
+    }
+
+    .busca__input {
+        width: calc(100% - 4rem); /* Diminui a largura para acomodar o ícone de busca */
+    }
+
+    .cards__lista {
+        justify-content: center; /* Centraliza os cards */
+    }
+
+    .card {
+        width: calc(50% - 1rem); /* Dois cards por linha com uma margem entre eles */
+    }
+
+    .card__imagem {
+        width: 100%; /* Imagens dos cards preenchendo o card */
+    }
+
+    .principal {
+        flex-direction: column; /* Empilha o conteúdo principal em coluna */
+    }
+
+    .menu-lateral {
+        padding: 0;
+    }
+}
+
+/* Responsividade para smartphones */
+@media (max-width: 480px) {
+
+    .pagina-inicial{
+        margin: 0.1rem;
+        padding: 0.2rem;
+        
+    }
+
+    .banner__titulo {
+        font-size: 18px; /* Tamanho de fonte menor para smartphones */
+        padding: 0 10px; /* Padding para não colar nas bordas da tela */
+        text-align: center; /* Centraliza o título */
+    }
+
+    .card {
+        width: 100%; /* Um card por linha */
+        margin-bottom: 1rem; /* Menor margem entre os cards */
+    }
+
+    .card__tag {
+        left: 50%; /* Centraliza a tag no card */
+        transform: translateX(-50%); /* Desloca a tag para a esquerda pela metade de sua largura */
+    }
+
+    
+    .menu-lateral__navegacao {
+        flex-direction: row; /* Organiza os links do menu em linha */
+        overflow-x: auto; /* Permite rolagem horizontal se necessário */
+
+    }
+
+    .menu-lateral__navegacao a {
+        font-size: 18px; /* Reduz o tamanho da fonte para os links */
+        margin-right: 1rem;
+    }
+
+    .rodape {
+        flex-direction: column; /* Empilha os itens do rodapé em coluna */
+        align-items: center; /* Centraliza os itens do rodapé */
+    }
+
+    .rodape__icones {
+        margin-bottom: 1rem; /* Adiciona margem entre os ícones e o texto */
+    }
 }
