@@ -62,13 +62,16 @@ table {
 
 .banner__imagem {
     width: 100%;
+    height: auto;
+    border-radius: 20px;
+
 }
 
 .banner__titulo {
     color: #FFFFFF;
     font-size: 40px;
     width: 350px;
-    line-height: 50px;
+    height: auto;
     position: absolute;
     top: 80px;
     left: 80px;
@@ -89,7 +92,7 @@ table {
 .cabecalho__busca {
     align-items: center;
     border-radius: 10px;
-    background: linear-gradient(45deg, #C98CF1,#7B78E5);
+    background: linear-gradient(45deg, #d7b4ff,#e833f8);
     display: flex;
     height: auto;
     justify-content: space-between;
@@ -355,35 +358,4 @@ table {
 
 .rodape__texto {
     font-size: 1.1rem;
-}
-
-.tags {
-    padding: 1.5rem 0;
-    display: flex;
-    align-items: center;
-    color: #2c2c2c;
-    font-size: 1.3rem;
-}
-
-.tags__titulo {
-    margin-right: 4rem;
-}
-
-.tags__lista {
-    display: flex;
-}
-
-.tags__tag {
-    background-color: #D9D9D930;
-    margin-right: 1.5rem;
-    border-radius: 8px;
-    padding: .8rem .5rem;
-    width: 100px;
-    text-align: center;
-    border: 2px solid transparent;
-}
-
-.tags__tag:hover {
-    border: 2px solid #7B78E5;
-    cursor: pointer;
 }
