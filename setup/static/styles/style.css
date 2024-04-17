@@ -68,13 +68,14 @@ table {
 }
 
 .banner__titulo {
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 40px;
     width: 350px;
     height: auto;
     position: absolute;
     top: 80px;
     left: 80px;
+    font-weight: bold
 }
 
 #logoClinica {

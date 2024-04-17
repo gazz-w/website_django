@@ -7,7 +7,7 @@
 <section class="conteudo">
     <section class="banner">
         <img class="banner__imagem" src="{% static '\assets\imagens\banner_principal.png' %}" alt="banner ">
-        <h1 class="banner__titulo"> O primeiro passo para uma vida melhor</h1>
+        <h1 class="banner__titulo"> </h1>
     </section>
 
     <section class="galeria">
@@ -17,8 +17,7 @@
                 {% for foto_id, info in cards.items %}
                 <li class="card">
                     <a href="{% url 'imagem' %}">
-                        <img class="card__imagem" src="{% static '/assets/imagens/landing_page/carina-nebula.png' %}"
-                            alt="foto">
+                        <img class="card__imagem" src="{% static info.imagem %}" alt="foto">
                     </a>
 
                     <div class="card__info">
