@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 
 class Servico(models.Model):
@@ -28,5 +29,17 @@ class Paciente(models.Model):
 
     def __str__(self):
         return f"Paciente [Nome={self.nome}]"
+
+
+class Agendamento(models.Model):
+    paciente = models.ForeignKey(Paciente, on_delete=models.CASCADE)
+    servico = models.ForeignKey(Servico, on_delete=models.CASCADE)
+    profissional = models.ForeignKey(Profissional, on_delete=models.CASCADE)
+    data_hora = models.DateTimeField(default=timezone.now)
+    status = models.CharField(max_length=10, choices=[(
+        'AGENDADO', 'Agendado'), ('CANCELADO', 'Cancelado')], default='AGENDADO')
+
+    def __str__(self):
+        return f"Agendamento para {self.paciente.nome} com {self.profissional.nome} em {self.data_hora.strftime('%d/%m/%Y %H:%M')}"
 
 # Create your models here.

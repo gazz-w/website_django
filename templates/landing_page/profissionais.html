@@ -1,0 +1,32 @@
+{% extends 'landing_page/base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="galeria">
+    <div class="cards">
+        <h2 class="cards__titulo">Conheça nossos Profissionais!</h2>
+        <ul class="cards__lista">
+            {% if cardsProfissionais %}
+            {% for foto_id, info in cards.items %}
+            {% for profissional, info in cardsProfissionais}
+            <li class="card">
+                <a href="{% url 'imagem' %}">
+                    <img class="card__imagem" src="{% static info.imagem %}" alt="foto">
+                </a>
+                <div class="card__info">
+                    <p class="card__titulo">{{profissionais.nome}}</p>
+                    <div class="card__texto">
+                        <p class="card__descricao">{{profissionais.especialidade}}</p>
+                    </div>
+                </div>
+            </li>
+            {% endfor %}
+            {% else %}
+            {% endif %}
+
+        </ul>
+    </div>
+</section>
+
+
+{% endblock %}
